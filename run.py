@@ -41,8 +41,9 @@ async def play(websocket):
             request_data = json.loads(request)
             if request_data['event'] == 'update_user_list':
                 pass
-            if request_data['event'] == 'gameover':
-                pass
+            if request_data['event'] == 'game_over':
+                board = request_data['data']['board']
+                print(board)
             if request_data['event'] == 'challenge':
                 # if request_data['data']['opponent'] == 'favoriteopponent':
                 await send(
