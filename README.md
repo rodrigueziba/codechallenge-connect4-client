@@ -2,8 +2,8 @@
 
 
 ```
-virtualenv env
-source env/bin/activate
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
 python run.py <your_bot_token>
 
